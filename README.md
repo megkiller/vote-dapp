@@ -1,33 +1,53 @@
-# vote
+### 项目介绍：
 
-This template should help get you started developing with Vue 3 in Vite.
+#### 前端：
 
-## Recommended IDE Setup
+`vue3`+`vant4`
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+##### 工具：
 
-## Type Support for `.vue` Imports in TS
+`vscode`和`vant`在线平台：https://vant-ui.github.io/
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+#### 交互：
 
-## Customize configuration
+`Web3.js`库
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+工具：小狐狸钱包（`MetaMask`）
 
-## Project Setup
+#### 后端：
 
-```sh
-npm install
-```
+`solisity`
 
-### Compile and Hot-Reload for Development
+##### 工具：
 
-```sh
-npm run dev
-```
+`Gnache`+`remix`在线平台：https://remix.ethereum.org/
 
-### Type-Check, Compile and Minify for Production
+#### 预览：
 
-```sh
-npm run build
-```
+![14bea40843469316cea726be971505c.png](https://s2.loli.net/2024/08/17/h8xeagCoNsu6XMd.png)
+
+功能介绍：
+在合约完成部署之后，主持人的地址就会被确定，并且在组件挂载时，就会将主持人地址也挂载上去。
+
+投票人地址：主持人可以发送数组（里面内容是地址）我这里用的是ganache本地测试，就是本地的账户。
+填写完成之后，点击开始分发选票，相应地址的账户就可以得到一张票权利。
+
+
+
+![4ea8c3f928b713af2343d0c8990ae6c.png](https://s2.loli.net/2024/08/17/NA1hbgezU38MBsv.png)
+
+当前账户：显示当前小狐狸连接的账户地址
+账户票数：也是小狐狸连接的账户所具有的可以投票的票数
+
+委托地址：这个图片展示的是默认值
+是否已经投票：投过为true,未投为false
+投票ID：票数给的是第几号地址
+委托人地址：可输入地址
+委托他人投票：点击之后就会将票数转移到受委托人地址，随之页面也会相应改动
+
+
+
+![a86b5155a9fda3b103f760af41b1fef.png](https://s2.loli.net/2024/08/17/Q9P7wrBcl2oWv6a.png)
+
+
+投票展板：介绍每一个参选人的ID，右侧是票数，并且点击之后就可以投票（在当前连接的账户有票权的情况下）
